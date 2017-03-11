@@ -173,7 +173,7 @@ Add this code to api.js
 ```javascript
 'use strict';
 
-const knex = require('../knex');
+const knex = require('../../knex');
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
