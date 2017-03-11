@@ -144,3 +144,25 @@ const knex = require('knex')(knexConfig);
 module.exports = knex;
 ```
 
+### Step 4 - Setup custom middleware and initial API route
+
+#### Add middleware to app.js file within your server folder
+
+Add this code to app.js
+```javascript
+'use strict';
+
+const express = require('express');
+const path = require('path');
+const port = process.env.PORT || 3000;
+
+const bodyParser = require('body-parser');
+
+const app = express();
+
+app.use(bodyParser.json());
+
+app.use('/api', require('../routes/api'));
+
+module.exports = app;
+```
