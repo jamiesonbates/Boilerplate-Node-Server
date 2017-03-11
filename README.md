@@ -202,5 +202,4 @@ If everything is running properly you should get a response body that says the f
 ```
 Hi from API!!!
 ```
-```
 
