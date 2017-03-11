@@ -182,3 +182,25 @@ router.get('/', (req, res) => {
 
 module.exports = router;
 ```
+
+#### Step 5 - Run server with nodemon and send http call 
+
+1. Open a new tab in your terminal (make sure you are within the same directory).
+2. Run this command to start your server
+```
+nodemon server/bin/www
+```
+The server should startup and the last line should say something like:
+```
+Listening on port 3001
+```
+3. In your original tab, run this command to send a call to your server
+```
+http GET localhost:3001/api/
+```
+If everything is running properly you should get a response body that says the following: 
+```
+Hi from API!!!
+```
+```
+
