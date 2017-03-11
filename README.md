@@ -57,29 +57,46 @@ touch tests/tests.js
 
 In your terminal, execute the following commands:
 
-Initialize NPM, which will automatically create a package.json file
+### Initialize NPM and create package.json file
 
-(with testing) - You will be prompted with options
+Do one of the following:
 
-Fill them out, if you'd like (they don't matter and can be changed later). When you get to the "test command:" option, input "mocha"
-
+If you are adding testing, run this command. You will be prompted, but you can skip them (clicking enter) until you reach "test command:". Add "mocha" for this prompt.
 ```
 npm init
 ```
+#### OR
 
-(skip testing) - This will skip the prompts
+If you are skipping testing, run this command. You will not be prompted and a default package.json file will be created.
 ```
 npm init -y
 ```
 
-House Keeping - Put node_modules into .gitignore file
+### House Keeping - Put node_modules into .gitignore file
 ```
 echo node_modules >> .gitignore
 ```
 
-Install Express.js, Knex.js as Dependencies.
+### Install Dependencies
+
+Install Express.js, Knex.js, PostgreSQL as dependencies.
 ```
-npm install --save express knex
+npm install --save express knex pg
+```
+
+Install Body Parser as a dependency.
+```
+npm install --save body-parser
+```
+
+Install Nodemon as a dependency.
+```
+npm install --save nodemon
+```
+
+If you are doing testing, install Chai.js and Mocha.js as Development Dependencies.
+```
+npm install --save-dev chai mocha
 ```
 
 
