@@ -183,7 +183,7 @@ router.get('/', (req, res) => {
 module.exports = router;
 ```
 
-#### Step 5 - Run server with nodemon and send http call 
+### Step 5 - Run server with nodemon and send http call 
 
 Open a new tab in your terminal (make sure you are within the same directory).
 Run this command to start your server
