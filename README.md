@@ -99,5 +99,35 @@ If you are doing testing, install Chai.js and Mocha.js as Development Dependenci
 npm install --save-dev chai mocha
 ```
 
+### Step 3 - Create Databases and Configure Knexfile.js and Knex.js
+Run the following commands in your terminal:
 
+#### Create your databases for development and testing
+Replace "mydatabase" with whatever you would like to name your databases.
+```
+createdb mydatabase_dev
+createdb mydatabase_test
+```
+
+#### Configure Knexfile.js
+
+Add this code to your knexfile.js (skip the "test" part if you are skipping testing):
+```javascript
+'use strict';
+
+module.exports = {
+  development: {
+    client: 'pg',
+    connection: 'postgres://localhost/mydatabase_dev'
+  },
+  test: {
+    client: 'pg',
+    connection: 'postgres://localhost/mydatabase_test'
+  },
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL
+  }
+}
+```
 
