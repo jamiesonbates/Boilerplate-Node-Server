@@ -53,5 +53,34 @@ mkdir tests
 touch tests/tests.js
 ```
 
+## Step 2 - Install Dependencies
+
+In your terminal, execute the following commands:
+
+Initialize NPM, which will automatically create a package.json file
+
+(with testing) - You will be prompted with options
+
+Fill them out, if you'd like (they don't matter and can be changed later). When you get to the "test command:" option, input "mocha"
+
+```
+npm init
+```
+
+(skip testing) - This will skip the prompts
+```
+npm init -y
+```
+
+House Keeping - Put node_modules into .gitignore file
+```
+echo node_modules >> .gitignore
+```
+
+Install Express.js, Knex.js as Dependencies.
+```
+npm install --save express knex
+```
+
 
 
