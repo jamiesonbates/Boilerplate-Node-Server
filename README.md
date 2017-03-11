@@ -162,7 +162,23 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/api', require('../routes/api'));
+app.use('/api', require('./routes/api'));
 
 module.exports = app;
+```
+
+#### Add initial API route to api.js within your router folder
+
+Add this code to api.js
+```javascript
+'use strict';
+
+const knex = require('../knex');
+const router = require('express').Router();
+
+router.get('/', (req, res) => {
+  res.send('Hi from API!!!');
+});
+
+module.exports = router;
 ```
